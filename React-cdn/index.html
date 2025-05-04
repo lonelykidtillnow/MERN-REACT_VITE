@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React-cdn</title>
+
+    <!--React CDN-->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+        <div id="1"></div>
+        <div id="2"></div>
+
+    <script>
+        //setter method
+        const a=React.createElement("h1",null,"Welcome");
+        const root1=ReactDOM.createRoot(document.getElementById("1"));
+        root1.render(a);        //render pass only one argument
+
+        const b=React.createElement("h3",null,"RAJESH");
+        const c=React.createElement("h3",null,"DUNKI");
+        const element=React.createElement("div",null,b,c);  //pass two argument use this
+        const root2=ReactDOM.createRoot(document.getElementById("2"));
+        root2.render(element);
+    </script>
+</body>
+</html>
